@@ -6,15 +6,14 @@ package com.company.chapterone.countduplicatecharacters;
 
 import java.util.Map;
 
-public class Main {
+public class Main{
+        private static final String TEXT = """
+                😍Turkey Java😍
+                💕💕&$$$ Community💕💕
+                🎼🎼🎼🎼🎼 Tip Kata 🎼🎼🎼🎼🎼""";
     public static void main(String[] args) {
 
-        String str = "TurkeyJavaCommunityTipKata";
-
-        Map<Character, Integer> duplicateCharacter = Strings.countDuplicateCharacters(str);
-        System.out.println("Duplicate characters : " + duplicateCharacter);
-
-        Map<Character, Long> duplicateCharacterStream = Strings.countDuplicateCharactersStream(str);
+        Map<String, Long> duplicateCharacterStream = Strings.countDuplicateCharactersStream(TEXT);
         System.out.println("Duplicate characters stream : " + duplicateCharacterStream);
 
 
